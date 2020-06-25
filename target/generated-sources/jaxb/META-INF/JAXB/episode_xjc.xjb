@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.3.2 generiert 
+Siehe <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+Generiert: 2020.06.25 um 05:49:12 AM CEST 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://spring.io/guides/gs-producing-web-service">
+    <schemaBindings map="false">
+      <package name="io.spring.guides.gs_producing_web_service"/>
+    </schemaBindings>
+    <bindings scd="tns:getCountryRequest">
+      <class ref="io.spring.guides.gs_producing_web_service.GetCountryRequest"/>
+    </bindings>
+    <bindings scd="tns:getCountryResponse">
+      <class ref="io.spring.guides.gs_producing_web_service.GetCountryResponse"/>
+    </bindings>
+    <bindings scd="~tns:country">
+      <class ref="io.spring.guides.gs_producing_web_service.Country"/>
+    </bindings>
+    <bindings scd="tns:getForecastRequest">
+      <class ref="io.spring.guides.gs_producing_web_service.GetForecastRequest"/>
+    </bindings>
+    <bindings scd="tns:getForecastResponse">
+      <class ref="io.spring.guides.gs_producing_web_service.GetForecastResponse"/>
+    </bindings>
+    <bindings scd="tns:getTemperaturRequest">
+      <class ref="io.spring.guides.gs_producing_web_service.GetTemperaturRequest"/>
+    </bindings>
+    <bindings scd="tns:getTemperaturResponse">
+      <class ref="io.spring.guides.gs_producing_web_service.GetTemperaturResponse"/>
+    </bindings>
+    <bindings scd="tns:getWindAndDirectionRequest">
+      <class ref="io.spring.guides.gs_producing_web_service.GetWindAndDirectionRequest"/>
+    </bindings>
+    <bindings scd="tns:getWindAndDirectionResponse">
+      <class ref="io.spring.guides.gs_producing_web_service.GetWindAndDirectionResponse"/>
+    </bindings>
+    <bindings scd="~tns:windAndDirection">
+      <class ref="io.spring.guides.gs_producing_web_service.WindAndDirection"/>
+    </bindings>
+    <bindings scd="~tns:currency">
+      <typesafeEnumClass ref="io.spring.guides.gs_producing_web_service.Currency"/>
+    </bindings>
+  </bindings>
+</bindings>
+

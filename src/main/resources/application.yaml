@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: smart-home-soap-service
+  mvc:
+    servlet:
+      path: /
+
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types: "text/xml"
