@@ -1,17 +1,4 @@
-io\spring\guides\gs_producing_web_service\GetTemperaturRequest.class
-io\spring\guides\gs_producing_web_service\GetCountryResponse.class
-io\spring\guides\gs_producing_web_service\GetTemperaturResponse.class
 wetter\service\main\SoapWebServiceApplication.class
-io\spring\guides\gs_producing_web_service\GetForecastResponse.class
 wetter\service\soap\TemperatureEndpoint.class
-io\spring\guides\gs_producing_web_service\package-info.class
-io\spring\guides\gs_producing_web_service\Currency.class
-io\spring\guides\gs_producing_web_service\GetWindAndDirectionRequest.class
 wetter\service\soap\WindAndDirectionEndpoint.class
-io\spring\guides\gs_producing_web_service\ObjectFactory.class
 wetter\service\soap\ForecastEndpoint.class
-io\spring\guides\gs_producing_web_service\Country.class
-io\spring\guides\gs_producing_web_service\GetForecastRequest.class
-io\spring\guides\gs_producing_web_service\GetCountryRequest.class
-io\spring\guides\gs_producing_web_service\WindAndDirection.class
-io\spring\guides\gs_producing_web_service\GetWindAndDirectionResponse.class

@@ -5,21 +5,14 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
+import com.wetter_service.java.GetForecastRequest;
+import com.wetter_service.java.GetForecastResponse;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ws.server.endpoint.annotation.Endpoint;
-import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
-import org.springframework.ws.server.endpoint.annotation.RequestPayload;
-import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
-import io.spring.guides.gs_producing_web_service.GetCountryRequest;
-import io.spring.guides.gs_producing_web_service.GetCountryResponse;
-import io.spring.guides.gs_producing_web_service.GetForecastRequest;
-import io.spring.guides.gs_producing_web_service.GetForecastResponse;
 
 @Endpoint
 public class ForecastEndpoint {
-	private static final String NAMESPACE_URI = "http://spring.io/guides/gs-producing-web-service";
+	private static final String NAMESPACE_URI = "http://www.wetter-service.com/java";
 
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getForecastRequest")
 	@ResponsePayload
