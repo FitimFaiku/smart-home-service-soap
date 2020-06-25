@@ -23,17 +23,55 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	}
 
 	@Bean(name = "countries")
-	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema countriesSchema) {
+	public DefaultWsdl11Definition defaultWsdl11Definition() {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("CountriesPort");
 		wsdl11Definition.setLocationUri("/ws");
 		wsdl11Definition.setTargetNamespace("http://www.wetter-service.com/java");
-		wsdl11Definition.setSchema(countriesSchema);
+		wsdl11Definition.setSchemaCollection(schemaCollection());
+		// wsdl11Definition.setSchema(new SimpleXsdSchema(new ClassPathResource("countries.xsd")));
+		return wsdl11Definition;
+	}
+
+	@Bean(name = "forecast")
+	public DefaultWsdl11Definition forecastDefinition() {
+		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+		wsdl11Definition.setPortTypeName("ForecastPort");
+		wsdl11Definition.setLocationUri("/ws");
+		wsdl11Definition.setTargetNamespace("http://www.wetter-service.com/java");
+		wsdl11Definition.setSchemaCollection(schemaCollection());
+		// wsdl11Definition.setSchema(new SimpleXsdSchema(new ClassPathResource("forecast.xsd")));
+		return wsdl11Definition;
+	}
+
+	@Bean(name = "temperature")
+	public DefaultWsdl11Definition temperatureDefinition() {
+		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+		wsdl11Definition.setPortTypeName("TemperaturePort");
+		wsdl11Definition.setLocationUri("/ws");
+		wsdl11Definition.setTargetNamespace("http://www.wetter-service.com/java");
+		wsdl11Definition.setSchemaCollection(schemaCollection());
+		// wsdl11Definition.setSchema(new SimpleXsdSchema(new ClassPathResource("temperature.xsd")));
+		return wsdl11Definition;
+	}
+
+	@Bean(name = "windAndDirection")
+	public DefaultWsdl11Definition windAndDirectionDefinition() {
+		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+		wsdl11Definition.setPortTypeName("WindAndDirectionPort");
+		wsdl11Definition.setLocationUri("/ws");
+		wsdl11Definition.setTargetNamespace("http://www.wetter-service.com/java");
+		wsdl11Definition.setSchemaCollection(schemaCollection());
 		return wsdl11Definition;
 	}
 
 	@Bean
-	public XsdSchema countriesSchema() {
-		return new SimpleXsdSchema(new ClassPathResource("countries.xsd"));
+	public XsdSchemaCollection schemaCollection() {
+		CommonsXsdSchemaCollection commonsXsdSchemaCollection = new CommonsXsdSchemaCollection(
+				new ClassPathResource("countries.xsd"),
+				new ClassPathResource("forecast.xsd"), new ClassPathResource("temperatur.xsd"), new ClassPathResource("windAndDirection.xsd"));
+		commonsXsdSchemaCollection.setInline(true);
+		return commonsXsdSchemaCollection;
 	}
+
 }
